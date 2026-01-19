@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WorkspaceSettings">
+    <project name="01-Bases" path="$PROJECT_DIR$/01-Bases" />
+    <project name="02-ConceptsObjets" path="$PROJECT_DIR$/02-ConceptsObjets" />
+    <option name="workspace" value="true" />
+  </component>
+</project>
