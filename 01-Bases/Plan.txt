@@ -1,0 +1,3 @@
+Plan:
+
+- 01-Bases: datatypes - formattage de chaines - opérateurs - conditions - Boucles - TP - Tableaux - Enumeration - Méthodes
