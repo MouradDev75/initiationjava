@@ -1,7 +1,13 @@
 package principal;
 
 
+import abstraction.Femme;
+import abstraction.Homme;
+import abstraction.Humain;
+import composition.*;
+import encapsulation.CompteBancaire;
 import encapsulation.Rectangle;
+import heritage_polymorphisme.*;
 
 public class App {
 
@@ -32,7 +38,7 @@ public class App {
         u.afficherDetails();
 
         /*
-        Concepts objets: Encapsulation - Héritage - Abstraction - Polymorphisme - Composition (association)
+        Concepts objets: Encapsulation - Héritage -  Polymorphisme - Abstraction -Composition (association)
          */
 
         System.out.println("******************Encapsulation*************************");
@@ -52,15 +58,132 @@ public class App {
 
         Rectangle rec1 = new Rectangle(-30, 22);
 
+        CompteBancaire cpt1 = new CompteBancaire("sdqs155", 1000);
+        cpt1.depot(500);
+        cpt1.retrait(350);
+
+        System.out.println(cpt1);
+
+        CompteBancaire cpt2 = new CompteBancaire("ddddd11",250);
+        CompteBancaire cpt3 = new CompteBancaire("ddddd11",2250);
+
+        System.out.println(cpt2.equals(cpt3));
 
 
+        cpt1 = null;
+        cpt2 = null;
+        cpt3 = null;
 
+        System.gc(); //appelle explicite du garbage collector -> qui ne garantit pas son passage immédiat
+        //Runtime.getRuntime().gc();
+
+        System.out.println("***************** Héritage *******************");
+
+        Animal a = new Animal();
+        a.setNom("animal");
+        a.setAge(5);
+        a.emettreSon();
+
+        Chat c = new Chat();
+        c.setNom("chat");
+        c.setAge(3);
+        c.emettreSon();
+
+        Animal a2 = new Animal("a2", 8);
+        Chat c2 = new Chat("c2", 2, "gris");
+
+        /*
+        une classe mère définie une structure de base pour les classes filles, contient les éléments communs (attributs et méthodes)
+        une classe fille, via l'héritage récupère tous les membres de la classe mère
+        une classe fille, en plus des attributs définis dans la classe mère, elle peut avoir des attributs qui lui sont spécifiques
+        une classe fille, en plus des méthodes définies dans la classe mère, elle peut avoir des méthodes qui lui sont spécifiques
+        une classe fille, en cas de besoin eut redéfinir les méthodes de la classe mère
+         */
+
+        Animal animal1 = new Animal();
+        Animal animal2 = new Chat();
+        Animal animal3 = new Chien();
+
+        /*
+        polymorphisme: c'est le fait qu'un objet puisse prendre plusieurs formes.
+        c'est une conséquence de l'héritage, c'est le fait que l'objet parent puisse prendre la forme de tous les objets enfants
+         */
+
+        Object o = 10;
+        Object o1= "test";
+        Object o2 = new Animal();
+
+
+        //collection polymorphique:
+        Animal[] animaux = new Animal[10];
+        animaux[0] = new Animal();
+        animaux[1] = new Chat();
+        animaux[2] = new Chien();
+        animaux[3] = new Giraffe();
+
+
+        son(new Animal());
+        son(new Chat());
+        son(new Chien());
+        son(new Giraffe());
+
+        A[] tabA = new A[3];
+        B[] tabB = new B[3];
+        C[] tabC = new C[3];
+
+        ClasseSup[] myTab = new ClasseSup[10];
+
+        System.out.println("************************** Abstraction *********************");
+        /*
+        une classe abstraite est une classe non instanciable.
+         */
+        Homme h = new Homme();
+        Femme f = new Femme();
+        Humain hum = new Homme();
+
+        System.out.println("************************** Composition *********************");
+
+        Client cl1 = new Client("Carrefour", new Adresse(10, "rue machine 75015 Paris"));
+
+        IClient persistence = new ClientFichierImp();
+        persistence.insert(cl1);
+        persistence.update(cl1);
+        persistence.delete(cl1);
 
 
     }
 
     private static double surface(double hauteur, double largeur) {
         return hauteur * largeur;
+    }
+    //méthode polymorphique: polymorphisme par sous typage
+    public static void son(Animal a){
+        a.emettreSon();
+    }
+
+    //poymorphisme ad-hoc: nécessite un contrôle + cast
+    public static void son2(Object o){
+        if(o instanceof Animal){
+            Animal a = (Animal) o;
+            a.emettreSon();
+        }
+    }
+
+
+    public static void methdeA(A a){
+
+    }
+
+    public static void methdeB(B b){
+
+    }
+
+    public static void methdeC(C c){
+
+    }
+
+    public static void myMethod(ClasseSup c){
+
     }
 
 }

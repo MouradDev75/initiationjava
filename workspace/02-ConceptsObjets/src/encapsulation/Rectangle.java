@@ -6,7 +6,7 @@ public class Rectangle {
     private double largeur;
     private int age;
 
-    private int getAge() {
+    public int getAge() {
         return age;
     }
 
