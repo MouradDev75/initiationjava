@@ -3,6 +3,9 @@
   <component name="WorkspaceSettings">
     <project name="01-Bases" path="$PROJECT_DIR$/01-Bases" />
     <project name="02-ConceptsObjets" path="$PROJECT_DIR$/02-ConceptsObjets" />
+    <project name="03-ClasseString" path="$PROJECT_DIR$/03-ClasseString" />
+    <project name="04-Exception" path="$PROJECT_DIR$/04-Exception" />
+    <project name="05-DemoDebug" path="$PROJECT_DIR$/05-DemoDebug" />
     <option name="workspace" value="true" />
   </component>
 </project>

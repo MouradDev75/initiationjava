@@ -2,4 +2,10 @@ Plan:
 
 - 01-Bases: datatypes - formattage de chaines - opérateurs - conditions - Boucles - TP - Tableaux - Enumeration - Méthodes
 
-- 02-ConceptsObjets: Encapsulation - Héritage -  Polymorphisme - Abstraction -Composition (association)
+- 02-ConceptsObjets: Encapsulation - Héritage -  Polymorphisme - Abstraction -Composition (association) - TP
+
+- 03-String
+
+- 04-Exception
+
+- 05-Démo Debug

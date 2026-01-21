@@ -21,11 +21,12 @@ public class CompteBancaire{
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(String numero) throws AttributException {
         if(numero.length() >= 6) {
             this.numero = numero;
         }else {
-            System.out.println("Numéro doit contenir 6 char au minimum.....");
+            //System.out.println("Numéro doit contenir 6 char au minimum.....");
+            throw new AttributException("Numéro doit contenir 6 char au minimum.....");
         }
     }
 
@@ -37,8 +38,8 @@ public class CompteBancaire{
         this.solde = solde;
     }
 
-    public CompteBancaire(String numero, double solde) {
-        this.numero = numero;
+    public CompteBancaire(String numero, double solde) throws Exception {
+        setNumero(numero);
         this.solde = solde;
     }
 
@@ -50,11 +51,12 @@ public class CompteBancaire{
         this.solde += montant;
     }
 
-    public void retrait(double montant){
+    public void retrait(double montant) throws SoldeException {
         if(this.solde >= montant){
             this.solde -= montant;
         }else{
-            System.out.println("Solde insuffisant.......");
+            //System.out.println("Solde insuffisant.......");
+            throw new SoldeException("solde insuffiant...........");
         }
     }
 
@@ -84,6 +86,6 @@ public class CompteBancaire{
     @Override
     protected void finalize() throws Throwable {
         System.out.println("Compte bancaire "+this.numero+" détruit en mémoire.....");
-        //pratique pour faire des sauvegardes: suavegarder un objet avant sa destruction
+        //pratique pour faire des sauvegardes: sauvegarder un objet avant sa destruction
     }
 }

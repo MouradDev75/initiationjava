@@ -11,7 +11,7 @@ import heritage_polymorphisme.*;
 
 public class App {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
         /*
         approche classique: repose sur l'utilisation de params et de fonctions
@@ -143,7 +143,7 @@ public class App {
 
         System.out.println("************************** Composition *********************");
 
-        Client cl1 = new Client("Carrefour", new Adresse(10, "rue machine 75015 Paris"));
+        Client cl1 = new Client("Carrefour", new Adresse(10, "rue machin 75015 Paris"));
 
         IClient persistence = new ClientFichierImp();
         persistence.insert(cl1);
