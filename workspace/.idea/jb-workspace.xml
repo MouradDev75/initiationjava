@@ -6,6 +6,11 @@
     <project name="03-ClasseString" path="$PROJECT_DIR$/03-ClasseString" />
     <project name="04-Exception" path="$PROJECT_DIR$/04-Exception" />
     <project name="05-DemoDebug" path="$PROJECT_DIR$/05-DemoDebug" />
+    <project name="06-Dates" path="$PROJECT_DIR$/06-Dates" />
+    <project name="07-Collections" path="$PROJECT_DIR$/07-Collections" />
+    <project name="08-Fichiers" path="$PROJECT_DIR$/08-Fichiers" />
+    <project name="09-Serialisation" path="$PROJECT_DIR$/09-Serialisation" />
+    <project name="10-Genericite" path="$PROJECT_DIR$/10-Genericite" />
     <option name="workspace" value="true" />
   </component>
 </project>

@@ -9,3 +9,13 @@ Plan:
 - 04-Exception
 
 - 05-Démo Debug
+
+- 06-Dates
+
+- 07-Collections
+
+- 08-Fichiers
+
+- 09-Sérialisation: binaire, xml, json
+
+- 10-Généricité
