@@ -11,6 +11,8 @@
     <project name="08-Fichiers" path="$PROJECT_DIR$/08-Fichiers" />
     <project name="09-Serialisation" path="$PROJECT_DIR$/09-Serialisation" />
     <project name="10-Genericite" path="$PROJECT_DIR$/10-Genericite" />
+    <project name="11-DemoDatabase" path="$PROJECT_DIR$/11-DemoDatabase" />
+    <project name="12-DemoSwing" path="$PROJECT_DIR$/12-DemoSwing" />
     <option name="workspace" value="true" />
   </component>
 </project>

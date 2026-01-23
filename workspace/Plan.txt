@@ -2,7 +2,7 @@ Plan:
 
 - 01-Bases: datatypes - formattage de chaines - opérateurs - conditions - Boucles - TP - Tableaux - Enumeration - Méthodes
 
-- 02-ConceptsObjets: Encapsulation - Héritage -  Polymorphisme - Abstraction -Composition (association) - TP
+- 02-ConceptsObjets: Encapsulation - Héritage -  Polymorphisme - Abstraction - Composition (association) - TP
 
 - 03-String
 
@@ -19,3 +19,7 @@ Plan:
 - 09-Sérialisation: binaire, xml, json
 
 - 10-Généricité
+
+- 11- Démo database
+
+- 12- Démo Swing
