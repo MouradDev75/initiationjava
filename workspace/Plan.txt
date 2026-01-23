@@ -22,4 +22,4 @@ Plan:
 
 - 11- Démo database
 
-- 12- Démo Swing
+- 12- Démo Swing + database
